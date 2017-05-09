@@ -36,8 +36,6 @@ public class MainBorrow extends AppCompatActivity {
     private ArrayList<String> mThaiClub = new ArrayList<String>();
     private ImageView Borrow;
     private OPPMSService service;
-    Button btn_submit;
-    Button btn_cancle;
 
     private MainBorrow activity;
 
@@ -48,30 +46,17 @@ public class MainBorrow extends AppCompatActivity {
         setContentView(R.layout.activity_main_borrow);
 
 
-       Button btnSubmitBorrow = (Button)findViewById(R.id.btnSubmitBorrow);
+        Button btnSubmitBorrow = (Button)findViewById(R.id.btnSubmitBorrow);
+
         btnSubmitBorrow.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-
+                Intent intent = new Intent(MainBorrow.this,MainActivity.class);
+                MainBorrow.this.startActivity(intent);
 
                 Toast.makeText(getApplicationContext(), "SAVE SUCCESS",
-                       Toast.LENGTH_LONG).show();
-                Intent intent = new Intent(MainBorrow.this,MainActivity.class);
+                        Toast.LENGTH_LONG).show();
 
-                MainBorrow.this.startActivity(intent);
-//                TextView Sdate = (TextView)findViewById(R.id.textView1);
-//                TextView Edate = (TextView)findViewById(R.id.textView22);
-//                Spinner NamePeron = (Spinner)findViewById(R.id.english_club);
-//
-//
-//
-//                String SDate = Sdate.getText().toString();
-//                String EDate = Edate.getText().toString();
-
-
-
-//                Toast.makeText(getApplicationContext(), sdate,
-//                        Toast.LENGTH_LONG).show();
             }
         });
 
@@ -94,18 +79,8 @@ public class MainBorrow extends AppCompatActivity {
 
         button1 = (Button)findViewById(R.id.button1);
         button22 = (Button)findViewById(R.id.button22);
-        btn_submit = (Button)findViewById(R.id.btn_submit);
-        btn_cancle = (Button)findViewById(R.id.btn_cancle);
-
-
-
-
-
-
 
         button1.setOnClickListener(new View.OnClickListener() {
-
-
 
             @Override
             public void onClick(View v) {
@@ -128,30 +103,9 @@ public class MainBorrow extends AppCompatActivity {
 
                 dialogfragment.show(getFragmentManager(), "Theme 22");
 
-
             }
 
         });
-
-        btn_submit.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-        btn_cancle.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
-                startActivity(intent);
-
-            }
-        });
-
-
         mEnglishSpinner = (Spinner) findViewById(R.id.english_club);
         mThaiSpinner = (Spinner) findViewById(R.id.thai_club);
 
