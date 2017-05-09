@@ -12,8 +12,7 @@ public class SendQuick {
     @SerializedName("result")
     public String result;
 
-    @SerializedName("details")
-    public ArrayList<EditPerson> Person;
+
 
 
 
