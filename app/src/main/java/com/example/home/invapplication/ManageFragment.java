@@ -43,8 +43,6 @@ public class ManageFragment extends Fragment {
 
         Button btnChange = (Button) v.findViewById(R.id.btnChangepass);
         btnChange.setOnClickListener(new View.OnClickListener(){
-
-
             @Override
             public void onClick(View v) {
                 //Set the fragment ให้เชื่อมกับ ChangPasseordFragment และแสดงหน้า fragment_chang_password.xml
