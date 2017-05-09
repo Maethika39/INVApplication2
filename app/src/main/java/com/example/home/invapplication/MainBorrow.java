@@ -5,6 +5,7 @@ import android.app.AlertDialog;
 import android.app.DatePickerDialog;
 import android.app.Dialog;
 import android.app.DialogFragment;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -29,6 +30,8 @@ public class MainBorrow extends AppCompatActivity {
 
     private ImageView Borrow;
     private OPPMSService service;
+    Button btn_submit;
+    Button btn_cancle;
 
 
     @Override
@@ -38,8 +41,18 @@ public class MainBorrow extends AppCompatActivity {
 
         button1 = (Button)findViewById(R.id.button1);
         button22 = (Button)findViewById(R.id.button22);
+        btn_submit = (Button)findViewById(R.id.btn_submit);
+        btn_cancle = (Button)findViewById(R.id.btn_cancle);
+
+
+
+
+
+
 
         button1.setOnClickListener(new View.OnClickListener() {
+
+
 
             @Override
             public void onClick(View v) {
@@ -65,6 +78,26 @@ public class MainBorrow extends AppCompatActivity {
             }
 
         });
+
+        btn_submit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+        btn_cancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getApplicationContext(), MainActivity.class);
+                startActivity(intent);
+
+            }
+        });
+
+
         mEnglishSpinner = (Spinner) findViewById(R.id.english_club);
         mThaiSpinner = (Spinner) findViewById(R.id.thai_club);
 
