@@ -61,6 +61,15 @@ public class MainFragment extends Fragment {
             }
         });
 
+        ImageView imgborrowBroken = (ImageView)v.findViewById(R.id.imgborrowBroken);
+        imgborrowBroken.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),Mainborrowbroken.class);
+                startActivity(intent);
+            }
+        });
+
         return v;
     }
 
