@@ -38,6 +38,8 @@ public class MainBorrow extends AppCompatActivity {
     private OPPMSService service;
 
     private MainBorrow activity;
+    Button btnCancle;
+
 
 
     @Override
@@ -79,6 +81,7 @@ public class MainBorrow extends AppCompatActivity {
 
         button1 = (Button)findViewById(R.id.button1);
         button22 = (Button)findViewById(R.id.button22);
+        btnCancle = (Button)findViewById(R.id.btnCancle);
 
         button1.setOnClickListener(new View.OnClickListener() {
 
@@ -106,6 +109,16 @@ public class MainBorrow extends AppCompatActivity {
             }
 
         });
+
+        btnCancle.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainBorrow.this,MainActivity.class);
+
+                MainBorrow.this.startActivity(intent);
+            }
+        });
+
         mEnglishSpinner = (Spinner) findViewById(R.id.english_club);
         mThaiSpinner = (Spinner) findViewById(R.id.thai_club);
 
