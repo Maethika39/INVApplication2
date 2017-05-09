@@ -10,7 +10,7 @@
     <color name="bgColorContent_menu">#827676</color>
     <color name="bgColorContent_menu_logo">#A8A2A2</color>
 
-    <color name="colorHeadGroupText">#D8D8D8</color>
+    <color name="colorHeadGroupText">#d8d8d8</color>
     <color name="bgColorHeadGroup">#675d5d</color>
     <color name="bgColorGroup">#8D8383</color>
 </resources>

@@ -1,173 +1,209 @@
-<android.support.constraint.ConstraintLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.example.home.invapplication.RegisterActivity">
+    tools:context="com.example.home.invapplication.Register">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
-        android:id="@+id/register"
-        android:layout_width="wrap_content"
+    <ScrollView
+        android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:text="สมัครสมาชิก"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        tools:layout_editor_absoluteY="6dp"
-        tools:layout_editor_absoluteX="16dp" />
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        tools:layout_editor_absoluteY="0dp"
+        android:layout_marginStart="8dp"
+        android:layout_marginEnd="8dp">
 
-    <TextView
-        android:id="@+id/textName"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ชื่อ-สกุล"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="50dp" />
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <TextView
+                android:id="@+id/register"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:text="สมัครสมาชิก"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                />
+            <TextView
+                android:id="@+id/textName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="ชื่อ-สกุล"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/editTextName"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                />
+            <TextView
+                android:id="@+id/textAddress"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="ที่อยู่"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/editTextAddress"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:id="@+id/textTell"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:text="เบอร์บ้าน"
+                    android:textSize="18sp"
+                    />
+                <TextView
+                    android:id="@+id/textTellPhone"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:text="เบอร์มือถือ"
+                    android:textSize="18sp"
+                    />
+            </LinearLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <EditText
+                    android:id="@+id/editTextTell"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"/>
+                <EditText
+                    android:id="@+id/editTextTellPhone"
+                    android:layout_width="170dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginRight="@dimen/size_5dp"
+                    android:layout_marginTop="@dimen/size_5dp"/>
+            </LinearLayout>
+            <TextView
+                android:id="@+id/textEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="E-mail"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/editTextEmail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                />
+            <TextView
+                android:id="@+id/textPosition"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="ตำแหน่งงาน"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/editTextPosition"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                />
+            <TextView
+                android:id="@+id/textPass"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="รหัสผ่าน"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/editTextPass"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                />
+            <TextView
+                android:id="@+id/textPass2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/size_5dp"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:text="ยืนยันรหัสผ่าน"
+                android:textSize="18sp"
+                />
+            <EditText
+                android:id="@+id/editTextPass2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="8dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="8dp"
+                />
 
-    <EditText
-        android:id="@+id/editTextName"
-        android:layout_width="585dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="88dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <Button
+                    android:id="@+id/buttonCancel"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="@dimen/size_5dp"
+                    android:layout_marginRight="150dp"
+                    android:layout_marginTop="20dp"
+                    android:text="ยกเลิก" />
 
-    <TextView
-        android:id="@+id/textAddress"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ที่อยู่"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="151dp" />
+                <Button
+                    android:id="@+id/buttonSubmit"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="@dimen/size_5dp"
+                    android:layout_marginTop="20dp"
+                    android:background="#FFDD00"
+                    android:text="ตกลง" />
+            </LinearLayout>
+        </LinearLayout>
+    </ScrollView>
 
-    <EditText
-        android:id="@+id/editTextAddress"
-        android:layout_width="585dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPostalAddress"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="170dp" />
-
-    <TextView
-        android:id="@+id/textTell"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="เบอร์บ้าน"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="245dp" />
-
-    <EditText
-        android:id="@+id/editTextTell"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="13"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="275dp" />
-
-    <TextView
-        android:id="@+id/textTellPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="เบอร์มือถือ"
-        tools:layout_editor_absoluteX="303dp"
-        tools:layout_editor_absoluteY="245dp" />
-
-    <EditText
-        android:id="@+id/editTextTellPhone"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:ems="12"
-        android:inputType="phone"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="275dp" />
-
-    <TextView
-        android:id="@+id/textEmail"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="E-mail"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="328dp" />
-
-    <EditText
-        android:id="@+id/editTextEmail"
-        android:layout_width="585dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textEmailAddress"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="362dp" />
-
-    <TextView
-        android:id="@+id/textPosition"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ตำแหน่งงาน"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="423dp" />
-
-    <EditText
-        android:id="@+id/editTextPosition"
-        android:layout_width="585dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPersonName"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="459dp" />
-
-    <TextView
-        android:id="@+id/textPass"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="รหัสผ่าน"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="509dp" />
-
-    <EditText
-        android:id="@+id/editTextPass"
-        android:layout_width="585dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="textPassword"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="539dp" />
-
-    <TextView
-        android:id="@+id/textPass2"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ยืนยันรหัสผ่าน"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="622dp" />
-
-    <EditText
-        android:id="@+id/editTextPass2"
-        android:layout_width="585dp"
-        android:layout_height="wrap_content"
-        android:ems="10"
-        android:inputType="numberPassword"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="660dp" />
-
-    <Button
-        android:id="@+id/buttonCancel"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ยกเลิก"
-        tools:layout_editor_absoluteX="16dp"
-        tools:layout_editor_absoluteY="752dp" />
-
-    <Button
-        android:id="@+id/buttonSubmit"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="ตกลง"
-        android:background="#FFDD00"
-        tools:layout_editor_absoluteX="497dp"
-        tools:layout_editor_absoluteY="752dp" />
 </android.support.constraint.ConstraintLayout>
+
 
