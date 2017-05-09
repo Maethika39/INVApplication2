@@ -58,6 +58,7 @@
         <activity android:name=".Mainborrowbroken" />
         <activity android:name=".activity_click_return" />
         <activity android:name=".BorrowList" />
+        <activity android:name=".PlaceActivity" />
         <!--
              The API key for Google Maps-based APIs is defined as a string resource.
              (See the file "res/values/google_maps_api.xml").
