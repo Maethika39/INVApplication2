@@ -1,4 +1,8 @@
-package com.example.home.invapplication;
+package com.example.home.invapplication.Service;
+
+import com.example.home.invapplication.OPPMSDAO;
+import com.example.home.invapplication.SendQuick;
+import com.example.home.invapplication.Service.OPPMSDAOBYPERSON;
 
 import retrofit2.Call;
 import retrofit2.http.Field;
@@ -19,5 +23,8 @@ public interface OPPMSService {
     @POST("application/views/inventory/borrow/Andriod_SMEs/SMES_select_borrow_return.php")
     Call<OPPMSDAO> getData(); //รับข้อมูล
 
+    //SMEs_EditPerson.php
 
+    @POST("application/views/inventory/borrow/Andriod_SMEs/SMEs_EditPerson.php")
+    Call<OPPMSDAOBYPERSON> GetDataPerson(); //รับข้อมูล
 }

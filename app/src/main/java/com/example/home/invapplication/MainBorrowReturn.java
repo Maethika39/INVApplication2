@@ -2,8 +2,9 @@ package com.example.home.invapplication;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.widget.ListView;
+
+import com.example.home.invapplication.Service.OPPMSService;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -23,6 +24,7 @@ public class MainBorrowReturn extends AppCompatActivity {
                 .addConverterFactory(GsonConverterFactory.create())
                 .build();
         service = retrofit.create(OPPMSService.class);
+        activity = this;
         MainBorrowReturn();
 
 

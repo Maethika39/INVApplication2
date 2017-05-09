@@ -1,6 +1,5 @@
 package com.example.home.invapplication;
 
-import android.content.Context;
 import android.content.Intent;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
@@ -10,6 +9,8 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.Toast;
+
+import com.example.home.invapplication.Service.OPPMSService;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -55,8 +56,10 @@ public class MainLogin extends AppCompatActivity {
         btnLogin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                String email = etemail.getText().toString();
-                String password = etpasswords.getText().toString();
+                final String email = etemail.getText().toString();
+                final String password = etpasswords.getText().toString();
+
+
                 service.getOPPMSData(email,password).enqueue(new Callback<SendQuick>() {
                     @Override
                     public void onResponse(Call<SendQuick> call, Response<SendQuick> response)
@@ -70,7 +73,16 @@ public class MainLogin extends AppCompatActivity {
                             toast.show();
 
                             Intent intent = new Intent(MainLogin.this,MainActivity.class);
+                            intent.putExtra("name", email);
+                            intent.putExtra("password", password);
+
                             MainLogin.this.startActivity(intent);
+
+
+
+
+
+
                         }
                         else{
                             AlertDialog.Builder builder = new AlertDialog.Builder(MainLogin.this);
