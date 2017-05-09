@@ -8,7 +8,6 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
 
 
 /**
@@ -32,6 +31,7 @@ public class MainFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v = inflater.inflate(R.layout.fragment_main, container, false);
+
         ImageView borrow = (ImageView)v.findViewById(R.id.borrow);
         borrow.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -50,20 +50,19 @@ public class MainFragment extends Fragment {
             }
         });
 
-        ImageView borrow_return = (ImageView)v.findViewById(R.id.imgReturnBorrow);
-        borrow_return.setOnClickListener(new View.OnClickListener() {
+
+
+        ImageView imgBorrowList = (ImageView)v.findViewById(R.id.imgBorrowList);
+        imgBorrowList.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(getActivity(), MainBorrowReturn.class);
+                Intent intent = new Intent(getActivity(),BorrowList.class);
                 startActivity(intent);
             }
         });
+
         return v;
     }
-
-
-
-
 
 
 
