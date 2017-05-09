@@ -40,7 +40,7 @@ public class MainBorrowReturn extends AppCompatActivity {
 //                        Log.d("Borrow id : ",response.body().details.get(i).imem_first_name);
                         //Log.d("Borrow id : ",response.body().details.get(i).prob_name);
 
-                        MyAdapter adapter = new MyAdapter(activity,response.body().details);
+                        MyAdapterBorrowReturn adapter = new MyAdapterBorrowReturn(activity,response.body().details);
                         ListView listView = (ListView)findViewById(R.id.tvlistview1);
                         listView.setAdapter(adapter);
 
