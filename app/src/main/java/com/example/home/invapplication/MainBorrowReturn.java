@@ -3,6 +3,7 @@ package com.example.home.invapplication;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.util.Log;
+import android.widget.ListView;
 
 import retrofit2.Call;
 import retrofit2.Callback;
@@ -32,7 +33,16 @@ public class MainBorrowReturn extends AppCompatActivity {
                 @Override
                 public void onResponse(Call<OPPMSDAO> call, Response<OPPMSDAO> response) {
                     for(int i=0;i<response.body().details.size();i++){
-                        Log.d("data",response.body().details.get(i).borrow_id);}
+//                        Log.d("Borrow id : ",response.body().details.get(i).borrow_id);
+//                        Log.d("Borrow id : ",response.body().details.get(i).borrow_code);
+//                        Log.d("Borrow id : ",response.body().details.get(i).imem_first_name);
+                        //Log.d("Borrow id : ",response.body().details.get(i).prob_name);
+
+                        MyAdapter adapter = new MyAdapter(activity,response.body().details);
+                        ListView listView = (ListView)findViewById(R.id.tvlistview1);
+                        listView.setAdapter(adapter);
+
+                    }
                 }
 
                 @Override
