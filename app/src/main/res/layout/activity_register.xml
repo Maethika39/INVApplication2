@@ -11,7 +11,7 @@
         android:id="@+id/register"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="สมัครสมาชิกใหม่"
+        android:text="สมัครสมาชิก"
         android:textSize="20sp"
         android:textStyle="bold"
         tools:layout_editor_absoluteY="6dp"
