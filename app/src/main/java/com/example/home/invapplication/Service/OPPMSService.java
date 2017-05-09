@@ -27,4 +27,15 @@ public interface OPPMSService {
 
     @POST("application/views/inventory/borrow/Andriod_SMEs/SMEs_EditPerson.php")
     Call<OPPMSDAOBYPERSON> GetDataPerson(); //รับข้อมูล
+
+    @FormUrlEncoded
+    @POST("application/views/inventory/borrow/Andriod_SMEs/SMEs_insert.php") // ส่งข้อมูล
+    Call<SendQuick> sendData(@Field("name") String name,
+                             @Field("address") String address,
+                             @Field("house_number") String house_number,
+                             @Field("telephone") String telephone,
+                             @Field("email") String email,
+                             @Field("position") String position,
+                             @Field("password") String password,
+                             @Field("password_again") String password_again);
 }

@@ -43,8 +43,8 @@ public class MyAdapter  extends BaseAdapter {
     public View getView(int position, View convertView, ViewGroup parent) {
         View view = inflater.inflate(R.layout.activity_click_return, null);
 
-        TextView borrow_id = (TextView) view.findViewById(R.id.textView0);
-        borrow_id.setText(details.get(position).borrow_id);
+//       // TextView borrow_id = (TextView) view.findViewById(R.id.textView0);
+//        borrow_id.setText(details.get(position).borrow_id);
 
         TextView textview = (TextView) view.findViewById(R.id.textViewa);
         textview.setText(details.get(position).borrow_code);
