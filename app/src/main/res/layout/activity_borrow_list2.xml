@@ -7,6 +7,17 @@
 
     android:background="#996666"
     >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+        <TextView
+            android:textColor="#FFFFFF"
+            android:textAlignment="center"
+            android:text="รายการยืมสินค้า"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+    </LinearLayout>
     <TableLayout
         android:id="@+id/header"
         android:layout_width="fill_parent"
