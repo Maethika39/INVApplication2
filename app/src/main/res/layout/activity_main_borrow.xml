@@ -134,7 +134,6 @@
             android:textSize="10dp" />
 
         <Button
-            android:id="@+id/btn_cancle"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="40dp"
@@ -143,7 +142,7 @@
             android:text="ยกเลิก" />
 
         <Button
-            android:id="@+id/btn_submit"
+            android:id="@+id/btnSubmitBorrow"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginLeft="220dp"

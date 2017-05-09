@@ -23,6 +23,10 @@ public interface OPPMSService {
     @POST("application/views/inventory/borrow/Andriod_SMEs/SMES_select_borrow_return.php")
     Call<OPPMSDAO> getData(); //รับข้อมูล
 
+
+    @POST("application/views/inventory/borrow/Andriod_SMEs/SMEs_product.php")
+    Call<OPPMSDAO> getProduct(); //รับข้อมูล
+
     //SMEs_EditPerson.php
 
     @POST("application/views/inventory/borrow/Andriod_SMEs/SMEs_EditPerson.php")

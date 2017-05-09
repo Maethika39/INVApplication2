@@ -8,6 +8,7 @@ import android.app.DialogFragment;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -15,29 +16,81 @@ import android.widget.DatePicker;
 import android.widget.ImageView;
 import android.widget.Spinner;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.example.home.invapplication.Service.OPPMSService;
 
 import java.util.ArrayList;
 import java.util.Calendar;
 
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.Retrofit;
+import retrofit2.converter.gson.GsonConverterFactory;
+
 public class MainBorrow extends AppCompatActivity {
     Button button1,button22;
-
     private Spinner mEnglishSpinner;
     private Spinner mThaiSpinner;
     private ArrayList<String> mThaiClub = new ArrayList<String>();
-
     private ImageView Borrow;
     private OPPMSService service;
     Button btn_submit;
     Button btn_cancle;
+
+    private MainBorrow activity;
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main_borrow);
+
+
+       Button btnSubmitBorrow = (Button)findViewById(R.id.btnSubmitBorrow);
+        btnSubmitBorrow.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+
+
+                Toast.makeText(getApplicationContext(), "SAVE SUCCESS",
+                       Toast.LENGTH_LONG).show();
+                Intent intent = new Intent(MainBorrow.this,MainActivity.class);
+
+                MainBorrow.this.startActivity(intent);
+//                TextView Sdate = (TextView)findViewById(R.id.textView1);
+//                TextView Edate = (TextView)findViewById(R.id.textView22);
+//                Spinner NamePeron = (Spinner)findViewById(R.id.english_club);
+//
+//
+//
+//                String SDate = Sdate.getText().toString();
+//                String EDate = Edate.getText().toString();
+
+
+
+//                Toast.makeText(getApplicationContext(), sdate,
+//                        Toast.LENGTH_LONG).show();
+            }
+        });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
         button1 = (Button)findViewById(R.id.button1);
         button22 = (Button)findViewById(R.id.button22);
@@ -116,7 +169,7 @@ public class MainBorrow extends AppCompatActivity {
         mEnglishSpinner.setAdapter(adapterEnglish);
 
 
-    }
+    } // End OnCreate
     public static class DatePickerDialogTheme1 extends DialogFragment implements DatePickerDialog.OnDateSetListener{
 
         @Override
@@ -165,27 +218,39 @@ public class MainBorrow extends AppCompatActivity {
         }
     }
     private void createThaiClubData() {
+        Retrofit retrofit = new Retrofit.Builder()
+                .baseUrl("http://10.51.4.17/TSP57/SMEs/")
+                .addConverterFactory(GsonConverterFactory.create())
+                .build();
+        service = retrofit.create(OPPMSService.class);
+        activity = this;
+
+        service.getProduct().enqueue(new Callback<OPPMSDAO>() {
+            @Override
+            public void onResponse(Call<OPPMSDAO> call, Response<OPPMSDAO> response) {
+                for(int i=0;i<response.body().details.size();i++) {
+                   // Log.d("Borrow id : ",response.body().details.get(i).iprd_name);
+
+
+                    mThaiClub.add(response.body().details.get(i).iprd_name);
+
+
+                }
+
+            }
+
+            @Override
+            public void onFailure(Call<OPPMSDAO> call, Throwable t) {
+
+            }
+        });
+
+
+
+
 
         mThaiClub.add("ถังน้ำแข็ง");
-        mThaiClub.add("ถังน้ำแข็ง");
-        mThaiClub.add("Bangkok Glass");
-        mThaiClub.add("Bangkok United");
-        mThaiClub.add("BEC Tero");
-        mThaiClub.add("Buriram United");
-        mThaiClub.add("Chainat Hornbill");
-        mThaiClub.add("Chiangrai United");
-        mThaiClub.add("Chonburi");
-        mThaiClub.add("Muangthong United");
-        mThaiClub.add("Osotspa Saraburi");
-        mThaiClub.add("Police United");
-        mThaiClub.add("PTT Rayong");
-        mThaiClub.add("Ratchaburi");
-        mThaiClub.add("Samut Songkhram");
-        mThaiClub.add("Singhtarua");
-        mThaiClub.add("Sisaket");
-        mThaiClub.add("Songkhla United");
-        mThaiClub.add("Supanburi");
-        mThaiClub.add("TOT Bangkok");
+
 
     }
 

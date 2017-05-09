@@ -22,6 +22,7 @@ public class BorrowReturn {
     public String imem_first_name;
 
 
+
     @SerializedName("name")
     public String name;
 
@@ -39,4 +40,7 @@ public class BorrowReturn {
 
     @SerializedName("position")
     public String position;
+
+    @SerializedName("iprd_name")
+    public String iprd_name;
 }

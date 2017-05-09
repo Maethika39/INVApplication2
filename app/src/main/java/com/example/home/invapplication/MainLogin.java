@@ -73,8 +73,6 @@ public class MainLogin extends AppCompatActivity {
                             toast.show();
 
                             Intent intent = new Intent(MainLogin.this,MainActivity.class);
-                            intent.putExtra("name", email);
-                            intent.putExtra("password", password);
 
                             MainLogin.this.startActivity(intent);
 
