@@ -20,12 +20,12 @@ public interface OPPMSService {
     @POST("application/views/inventory/borrow/Andriod_SMEs/SMES_select_borrow_return.php")
     Call<OPPMSDAO> getData(); //รับข้อมูล
 
-    /*@FormUrlEncoded
-    @POST("application/views/inventory/borrow/Andriod_SMEs/SMES_select_borrow.php") // ส่งข้อมูล
-    Call<SendQuick> getOPPMSData(@Field("date1") String date1,
-                                 @Field("date2") String date2),
-                                 @Field("date2") String a),
-                                  @Field("date2") String date2); */
+    @FormUrlEncoded
+    @POST("application/views/inventory/borrow/Andriod_SMEs/SMEs_insert_borrow.php") // ส่งข้อมูล
+    Call<SendQuick> getOPPMSBorrow(@Field("borrow_sdate") String borrow_sdate,
+                                 @Field("borrow_edate") String borrow_edate,
+                                 @Field("borrow_cos_id") String borrow_cos_id,
+                                 @Field("borrow_product_id") String borrow_product_id);
 
 
 

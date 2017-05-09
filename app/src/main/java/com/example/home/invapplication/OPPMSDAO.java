@@ -15,4 +15,10 @@ public class OPPMSDAO {
 
     @SerializedName("details")
     public ArrayList<Borrow> detailborrow;
+
+
+    @SerializedName("details")
+    public ArrayList<BorrowAdd> databorrow;
+
+
 }
