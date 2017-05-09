@@ -124,7 +124,6 @@
                 android:layout_width="@dimen/content_menu_icon_size"
                 android:layout_height="@dimen/content_menu_icon_size"
                 android:src="@drawable/fragile"
-
                 />
 
             <TextView

@@ -8,110 +8,148 @@
     android:padding="20dp"
     >
 
-    <LinearLayout
-        android:layout_width="368dp"
-        android:layout_height="wrap_content"
-        android:layout_margin="20dp"
-        android:orientation="vertical"
-        tools:layout_editor_absoluteX="8dp"
-        tools:layout_editor_absoluteY="31dp"
-        >
+    <RelativeLayout
+        android:layout_width="350dp"
+        android:layout_height="450dp"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="8dp"
+        android:layout_marginRight="8dp"
+        android:background="#f5f5f5"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="8dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:layout_marginBottom="8dp">
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginLeft="24dp"
+            android:layout_marginStart="24dp"
+            android:layout_marginTop="24dp"
+            android:text="ข้อมูลการยืม"
+            android:textColor="#484646"
+            android:textSize="20dp" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="80dp"
+            android:text="วันที่ยืม"
+            android:textSize="15dp" />
+
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="130dp"
+            android:text="วันที่คืน"
+            android:textSize="15dp" />
 
         <TextView
             android:id="@+id/textView4"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="ข้อมูลการยืม"
-            android:textSize="24sp"
-            tools:layout_editor_absoluteX="32dp"
-            tools:layout_editor_absoluteY="-63dp" />
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="178dp"
+            android:text="ผู้ยืม"
+            android:textSize="15dp" />
 
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="225dp"
+            android:text="รายการสินค้า"
+            android:textSize="15dp" />
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="วันที่ยืม"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/dates"
-                android:layout_width="98dp"
-                android:layout_height="wrap_content"
-                android:singleLine="false"
-                android:textSize="24sp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="วันที่คืน"
-                android:textSize="18sp" />
-
-            <EditText
-                android:id="@+id/datee"
-                android:layout_width="98dp"
-                android:layout_height="wrap_content"
-                android:singleLine="false"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/english_club"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="165dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="ผู้ยืม"
-                android:textSize="18sp" />
+        </Spinner>
 
-            <EditText
-                android:id="@+id/add_borrow"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
-        <LinearLayout
-            android:layout_width="match_parent"
+        <Spinner
+            android:id="@+id/thai_club"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="horizontal">
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="200dp">
 
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="รายการสินค้า"
-                android:textSize="18sp" />
+        </Spinner>
 
-            <EditText
-                android:id="@+id/add_order"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:singleLine="true"
-                android:textSize="24sp" />
-
-        </LinearLayout>
-
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="88dp"
+            android:text="กรุณาเลือกวันที่"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="10dp" />
 
         <Button
-            android:id="@+id/button_submit"
-            android:layout_width="100dp"
+            android:id="@+id/button1"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="70dp"
+            android:text="DATE"
+            android:textSize="10dp"
+
+            />
+
+        <TextView
+            android:id="@+id/textView22"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="20dp"
+            android:layout_marginLeft="100dp"
+            android:layout_marginTop="135dp"
+            android:text="กรุณาเลือกวันที่"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="10dp" />
 
-            android:padding="15dp"
-            android:text="@android:string/ok" />
+        <Button
+            android:id="@+id/button22"
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:layout_marginLeft="200dp"
+            android:layout_marginTop="120dp"
+            android:text="DATE"
+            android:textAppearance="?android:attr/textAppearanceLarge"
+            android:textSize="10dp" />
 
-    </LinearLayout>
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="300dp"
+            android:background="#d9d8d8"
+            android:text="ยกเลิก" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="220dp"
+            android:layout_marginTop="300dp"
+            android:background="#1688fc"
+            android:text="ตกลง" />
+
+    </RelativeLayout>
 
 
 </android.support.constraint.ConstraintLayout>
