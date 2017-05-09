@@ -8,6 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.LinearLayout;
 
 
 /**
@@ -66,6 +67,15 @@ public class MainFragment extends Fragment {
             @Override
             public void onClick(View v) {
                 Intent intent = new Intent(getActivity(),Mainborrowbroken.class);
+                startActivity(intent);
+            }
+        });
+
+        LinearLayout layoutplace = (LinearLayout)v.findViewById(R.id.layoutplace);
+        layoutplace.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),MapsActivity.class);
                 startActivity(intent);
             }
         });

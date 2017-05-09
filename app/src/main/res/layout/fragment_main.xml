@@ -55,7 +55,9 @@
                 android:textSize="@dimen/text_head3" />
         </LinearLayout>
 
-        <LinearLayout style="@style/lay_btn_menu">
+        <LinearLayout
+            android:id="@+id/layoutplace"
+            style="@style/lay_btn_menu">
 
             <ImageView
                 android:layout_width="@dimen/content_menu_icon_size"
