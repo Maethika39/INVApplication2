@@ -35,7 +35,7 @@
         <activity android:name=".RegisterActivity" />
         <activity android:name=".MainBorrowReturn" />
         <activity android:name=".Mainborrowbroken" />
-        <activity android:name=".BorrowList"></activity>
+        <activity android:name=".BorrowList" />
     </application>
 
 </manifest>
