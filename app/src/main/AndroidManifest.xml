@@ -43,11 +43,12 @@
             </intent-filter>
         </activity>
         <activity android:name=".MainBorrow" />
+        <activity android:name=".Register" />
         <activity android:name=".MainBorrowReturn" />
         <activity android:name=".Mainborrowbroken" />
+        <activity android:name=".PlaceActivity" />
         <activity android:name=".activity_click_return" />
-        <activity android:name=".BorrowList" />
-        <activity android:name=".Register"></activity>
+        <activity android:name=".BorrowList"></activity>
     </application>
 
 </manifest>

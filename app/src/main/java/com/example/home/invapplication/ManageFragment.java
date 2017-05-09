@@ -41,8 +41,20 @@ public class ManageFragment extends Fragment {
             }
         });
 
+        Button btnChangepass = (Button) v.findViewById(R.id.btnChangepass);
+        btnChangepass.setOnClickListener(new View.OnClickListener(){
 
 
+            @Override
+            public void onClick(View v) {
+                //Set the fragment ให้เชื่อมกับ MainFragment และแสดงหน้า fragment_main.xml
+                ChangPasswordFragment fragment = new ChangPasswordFragment();
+                android.support.v4.app.FragmentTransaction fragmentTransaction =
+                        getFragmentManager().beginTransaction();
+                fragmentTransaction.replace(R.id.fragment_container, fragment);
+                fragmentTransaction.commit();
+            }
+        });
 
         return v;
 

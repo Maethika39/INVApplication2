@@ -7,52 +7,55 @@
     android:padding="10dp">
 
     <TableLayout
-        android:id="@+id/header"
+        android:id="@+id/header1"
         android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_marginLeft="2dp"
-        android:layout_marginRight="2dp"
+
         android:background="#f4eeee">
 
         <TableRow>
 
             <TextView
                 android:layout_width="25dp"
+                android:layout_height="25dp"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#edb1b1"
                 android:gravity="center_horizontal"
                 android:text="รหัสสินค้า"
-                android:textColor="@android:color/black" />
+                android:background="#dc4b4b"
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/textView3"
                 android:layout_width="25dp"
                 android:layout_margin="1dp"
+                android:layout_height="25dp"
                 android:layout_weight="1"
-                android:background="#edb1b1"
+                android:background="#dc4b4b"
                 android:gravity="center_horizontal"
                 android:text="สินค้า"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:id="@+id/textView2"
                 android:layout_width="25dp"
                 android:layout_margin="1dp"
+                android:layout_height="25dp"
                 android:layout_weight="1"
-                android:background="#edb1b1"
+                android:background="#dc4b4b"
                 android:gravity="center_horizontal"
                 android:text="ผู้ยืม"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
 
             <TextView
                 android:layout_width="25dp"
                 android:layout_margin="1dp"
                 android:layout_weight="1"
-                android:background="#edb1b1"
+                android:background="#dc4b4b"
                 android:gravity="center_horizontal"
+                android:layout_height="25dp"
                 android:text="ดำเนินการ"
-                android:textColor="@android:color/black" />
+                android:textColor="@android:color/white" />
 
         </TableRow>
     </TableLayout>
