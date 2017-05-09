@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="10dp"
+    >
+    <TableLayout
+        android:id="@+id/header"
+        android:layout_width="fill_parent"
+        android:layout_marginRight="2dp"
+        android:layout_marginLeft="2dp"
+        android:layout_height="wrap_content"
+        android:background="#f4eeee">
+        <TableRow>
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#edb1b1"
+                android:gravity="center_horizontal"
+                android:text="รหัสสินค้า"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textView3"
+                android:layout_width="25dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#edb1b1"
+                android:gravity="center_horizontal"
+                android:text="สินค้า"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="25dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#edb1b1"
+                android:gravity="center_horizontal"
+                android:text="ผู้ยืม"
+                android:textColor="@android:color/black" />
+
+            <TextView
+                android:layout_width="25dp"
+                android:layout_margin="1dp"
+                android:layout_weight="1"
+                android:background="#edb1b1"
+                android:gravity="center_horizontal"
+                android:text="ดำเนินการ"
+                android:textColor="@android:color/black" />
+
+        </TableRow>
+    </TableLayout>
+
+    <ScrollView
+        android:id="@+id/table_scroll"
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="2dp"
+        android:layout_marginRight="2dp">
+
+        <TableLayout
+            android:id="@+id/header"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="1dp"
+            android:layout_marginRight="1dp"
+            android:background="#ffffff">
+
+            <TableRow>
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:text="Col1"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Col2"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Col3"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="แจ้งสถานะ"
+                    android:textSize="10dp" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:text="Col1"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Col2"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Col3"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="แจ้งสถานะ"
+                    android:textSize="10dp" />
+            </TableRow>
+            <TableRow>
+                <TextView
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="#ffffff"
+                    android:gravity="center_horizontal"
+                    android:text="Col1"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:layout_marginTop="1dp"
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Col2"
+                    android:textColor="@android:color/black" />
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="25dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:background="@android:color/white"
+                    android:gravity="center_horizontal"
+                    android:text="Col3"
+                    android:textColor="@android:color/black" />
+
+                <Button
+                    android:id="@+id/button"
+                    android:layout_width="25dp"
+                    android:layout_height="30dp"
+                    android:layout_margin="1dp"
+                    android:layout_weight="1"
+                    android:gravity="center_horizontal"
+                    android:text="แจ้งสถานะ"
+                    android:textSize="10dp" />
+            </TableRow>
+        </TableLayout>
+    </ScrollView>
+</LinearLayout>

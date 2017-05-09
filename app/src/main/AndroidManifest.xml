@@ -33,7 +33,8 @@
         </activity>
         <activity android:name=".MainBorrow" />
         <activity android:name=".RegisterActivity" />
-        <activity android:name=".MainBorrowReturn"></activity>
+        <activity android:name=".MainBorrowReturn" />
+        <activity android:name=".Mainborrowbroken"></activity>
     </application>
 
 </manifest>
