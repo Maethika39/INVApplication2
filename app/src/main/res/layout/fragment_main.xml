@@ -120,9 +120,12 @@
         <LinearLayout style="@style/lay_btn_menu">
 
             <ImageView
+                android:id="@+id/imgborrowBroken"
                 android:layout_width="@dimen/content_menu_icon_size"
                 android:layout_height="@dimen/content_menu_icon_size"
-                android:src="@drawable/fragile" />
+                android:src="@drawable/fragile"
+
+                />
 
             <TextView
                 android:layout_width="72dp"
