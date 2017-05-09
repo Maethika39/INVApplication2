@@ -53,7 +53,7 @@ public class ManageFragment extends Fragment {
                         getFragmentManager().beginTransaction();
                 fragmentTransaction.replace(R.id.fragment_container, fragment);
                 fragmentTransaction.commit();
-            }
+            };;;;
         });
 
         return v;
