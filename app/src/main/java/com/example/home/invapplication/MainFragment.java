@@ -8,7 +8,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
-import android.widget.Toast;
+import android.widget.LinearLayout;
 
 
 /**
@@ -16,7 +16,7 @@ import android.widget.Toast;
  */
 public class MainFragment extends Fragment {
 
-
+    private LinearLayout Borrowlist;
 
 
     public MainFragment() {
@@ -49,6 +49,16 @@ public class MainFragment extends Fragment {
                 startActivity(intent);
             }
         });
+
+        LinearLayout Borrowlist = (LinearLayout)v.findViewById(R.id.borrow_list);
+        Borrowlist.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(),BorrowList.class);
+                startActivity(intent);
+            }
+        }); //รายการสินค้า
+
         return v;
     }
 

@@ -37,7 +37,8 @@
 
     <LinearLayout style="@style/group_menu">
 
-        <LinearLayout style="@style/lay_btn_menu">
+        <LinearLayout style="@style/lay_btn_menu"
+            android:id="@+id/borrow_list">
 
             <ImageView
                 android:layout_width="@dimen/content_menu_icon_size"
