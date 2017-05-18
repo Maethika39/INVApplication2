@@ -10,6 +10,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.example.home.invapplication.Service.OPPMSDAOBYPERSON;
@@ -86,7 +87,7 @@ public class ProfileFragment extends Fragment {
                     EditText email = (EditText)v.findViewById(R.id.emailText);
                     email.setText(response.body().Person.get(i).email);
 
-                    EditText rankText = (EditText)v.findViewById(R.id.rankText);
+                    TextView rankText = (TextView)v.findViewById(R.id.rankText);
                     rankText.setText(response.body().Person.get(i).position);
 
 
